@@ -28,7 +28,7 @@ from message_datatypes import ActiveCurrencyAndAmount
 from lxml.etree import tostring
 
 amount = ActiveCurrencyAndAmount(amount="12345.67", ccy="CHF")
-xml_element = amount.xml(tag="Amt")
+xml_element = amount.to_xml(tag="Amt")
 print(tostring(xml_element, pretty_print=True).decode("utf-8"))
 ```
 
